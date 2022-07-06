@@ -1,0 +1,189 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* SLIDESHOW */
+
+h1 span{
+  transition: .5s linear
+}
+h1:hover span:nth-child(1){
+  margin-right: 5px
+}
+h1:hover span:nth-child(1):after{
+  content: "'";
+}
+h1:hover span:nth-child(2){
+  margin-left: 30px
+}
+h1:hover span{
+  color: #fff;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff, 
+               0 0 40px #fff;
+}
+
+
+.slideshow {
+  list-style-type: none;
+}
+.slideshow,
+.slideshow:after { 
+    top: 150px; 
+		position: fixed;
+    width: 50%;
+    height: 70%;
+    left: 85px;
+    z-index: 0; 
+}
+.slideshow2,
+.slideshow2:after { 
+    top: 150px; 
+		position: fixed;
+    width: 30%;
+    height: 70%;
+    right: 85px;
+    z-index: 0; 
+}
+.slideshow2 h1{
+  text-align: right;
+  color:#f2494c;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+h1{
+  text-align: right;
+  color:#f2494c;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.slideshow2 h4{
+  text-align: right;
+  color: #2b2a61;
+}
+h4{
+  text-align: right;
+  color: #2b2a61;
+}
+
+
+
+.continer{
+  background-color:  rgba(5, 5, 5, 0.934);
+  position: relative;
+  overflow: hidden;
+
+
+}
+.content {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: auto;
+  overflow: hidden;
+
+}
+.slideshow li span { 
+		position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 30s linear infinite 0s; 
+}
+
+
+
+.slideshow li:nth-child(1) span { 
+    background-image: url("https://wateenapp.org/Assets/images/screen_1.png"); 
+    border-radius: 2%;
+}
+.slideshow li:nth-child(2) span { 
+  background-image: url("https://gumlet.assettype.com/ajel%2F2022-06%2F190a60e2-5238-46ad-bc82-2c7635579e15%2F__________________4_.jpg?auto=format%2Ccompress&fit=max&w=1200"); 
+    animation-delay: 6s; 
+    border-radius: 2%;
+}
+.slideshow li:nth-child(3) span { 
+    background-image: url("https://i.pinimg.com/564x/1f/34/81/1f34815de74af0bde333cbdd3374cc23.jpg"); 
+    animation-delay: 12s; 
+    border-radius: 2%;
+}
+.slideshow li:nth-child(4) span { 
+    background-image: url("https://i.pinimg.com/564x/56/2c/80/562c8098269f7aa26857e261a5dd0a25.jpg");   
+    animation-delay: 18s; 
+}
+.slideshow li:nth-child(5) span { 
+    background-image: url("https://i.pinimg.com/564x/91/02/79/91027978525a839d85c2c609214c5f39.jpg");
+    animation-delay: 24s; 
+}
+
+
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+
+@keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+
+.no-cssanimations .cb-slideshow li span {
+	opacity: 1;
+}
+.h-400{
+  height: 450px;
+}
+
